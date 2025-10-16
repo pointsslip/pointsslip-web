@@ -42,7 +42,7 @@ kill_all_npm_processes() {
 
 kill_all_npm_processes
 kill_process_using_port
-npm run dev & echo $! > "$PID_FILE"
+npm run preview & echo $! > "$PID_FILE"
 
 trap cleanup SIGINT
 
