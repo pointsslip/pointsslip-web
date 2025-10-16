@@ -7,7 +7,7 @@ PORT=4173
 # Function to start the npm preview
 start_preview() {
     echo "Starting the web project with 'npm run preview'..."
-    sudo npm run preview & echo $! > "$PID_FILE"
+    npm run preview & echo $! > "$PID_FILE"
 }
 
 kill_process_using_port() {
@@ -37,19 +37,19 @@ cleanup() {
 
 kill_all_npm_processes() {
     echo "Killing all npm processes..."
-    sudo pkill -f "npm run preview"
+    pkill -f "npm run preview"
 }
 
 kill_all_npm_processes
 kill_process_using_port
-sudo npm run preview & echo $! > "$PID_FILE"
+npm run dev & echo $! > "$PID_FILE"
 
 trap cleanup SIGINT
 
 # Infinite loop to check for updates
 while true; do
     # Fetch the latest changes from the remote repository
-    sudo git fetch
+    git fetch
 
     # Check if there are any changes to pull
     if [ $(git rev-list HEAD...origin/main --count) -gt 0 ]; then
@@ -59,10 +59,10 @@ while true; do
         stop_preview
 
         # Pull the latest changes
-        sudo git pull
+        git pull
 
         # Install any new dependencies (optional)
-        sudo npm install
+        npm install
 
         kill_all_npm_processes
         kill_process_using_port
@@ -75,5 +75,5 @@ while true; do
     fi
 
     # Wait for 5 seconds before checking again
-    sudo sleep 60
+    sleep 60
 done
