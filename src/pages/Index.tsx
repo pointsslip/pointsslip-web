@@ -35,6 +35,16 @@ const initialTasks: Task[] = [
   { id: "21", name: "Points for each day you are overdue on a course (-200 points):", points: -200, count: 0 },
 ];
 
+const externalLink = document.createElement('a');
+externalLink.href = 'https://delphinet.delphian.org/student/general/studentInfoPage.aspx';
+externalLink.textContent = 'Turn in points here!';
+externalLink.addEventListener('click', (event) => {
+  if (!confirm('Are you sure you want to leave this page?')) {
+    event.preventDefault();
+  }
+});
+document.body.appendChild(externalLink);
+
 const Index = () => {
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
 
@@ -119,14 +129,9 @@ const Index = () => {
                 </div>
                 {totalPoints > 0 && (
                   <div className="mt-4 rounded-lg bg-accent/10 px-4 py-2">
-                    <a 
-                      href="https://delphinet.delphian.org/student/general/studentInfoPage.aspx"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-accent font-medium hover:underline"
-                    >
-                      Turn in points here!
-                    </a>
+                    <p className="text-sm text-accent font-medium">
+                      externalLink
+                    </p>
                   </div>
                 )}
               </div>
