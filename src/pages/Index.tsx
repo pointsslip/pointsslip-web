@@ -12,14 +12,18 @@ interface Task {
 }
 
 const initialTasks: Task[] = [
-  { id: "1", name: "Complete Reading Assignment", points: 10, count: 0 },
-  { id: "2", name: "Math Problem Set", points: 15, count: 0 },
-  { id: "3", name: "Study Session (30 min)", points: 5, count: 0 },
-  { id: "4", name: "Essay Paragraph", points: 8, count: 0 },
-  { id: "5", name: "Science Lab Report", points: 20, count: 0 },
-  { id: "6", name: "Language Practice Exercise", points: 7, count: 0 },
-  { id: "7", name: "Physical Activity (30 min)", points: 5, count: 0 },
-  { id: "8", name: "Community Service Hour", points: 12, count: 0 },
+  { id: "1", name: "Pages Read (10 points per page):", points: 10, count: 0 },
+  { id: "2", name: "Videos/Live or Recorded Lectures/Teacher Instruction (5 points per minute):", points: 5, count: 0 },
+  { id: "3", name: "Passing a Theory Checkout (3 points per page):", points: 3, count: 0 },
+  { id: "4", name: "Giving a Theory Checkout (when passed, 3 points per page):", points: 3, count: 0 },
+  { id: "5", name: "Finding MUs (5 points per word):", points: 5, count: 0 },
+  { id: "6", name: "Giving a Checkout on a Demo (3 points):", points: 3, count: 0 },
+  { id: "7", name: "For Each Definition, Derivation, Idiom or Synonym Fully Cleared (3 points):", points: 3, count: 0 },
+  { id: "8", name: "Giving/Receiving Word Clearing (150 points per hour):", points: 150, count: 0 },
+  { id: "9", name: "Theory Coaching - Student and Coach (5 points per line):", points: 5, count: 0 },
+  { id: "10", name: "Any drill that takes 15 minutes or less. (40 points):", points: 40, count: 0 },
+  { id: "11", name: "Giving/Receiving Word Clearing (150 points per hour):", points: 12, count: 0 },
+  { id: "12", name: "Giving/Receiving Word Clearing (150 points per hour):", points: 12, count: 0 },
 ];
 
 const Index = () => {
