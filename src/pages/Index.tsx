@@ -22,8 +22,17 @@ const initialTasks: Task[] = [
   { id: "8", name: "Giving/Receiving Word Clearing (150 points per hour):", points: 150, count: 0 },
   { id: "9", name: "Theory Coaching - Student and Coach (5 points per line):", points: 5, count: 0 },
   { id: "10", name: "Any drill that takes 15 minutes or less. (40 points):", points: 40, count: 0 },
-  { id: "11", name: "Giving/Receiving Word Clearing (150 points per hour):", points: 12, count: 0 },
-  { id: "12", name: "Giving/Receiving Word Clearing (150 points per hour):", points: 12, count: 0 },
+  { id: "11", name: "Verbatim Learning (10 points per line):", points: 10, count: 0 },
+  { id: "12", name: "Any Practical, Drill, or Demonstration that takes more than 15 mins to do. (150 points per hour:)", points: 150, count: 0 },
+  { id: "13", name: "Completing a practical, drill, or demonstration that takes more than 15 mins but less than an hour (100 points):", points: 100, count: 0 },
+  { id: "14", name: "Completing a practical, drill, or demonstration that takes more than 1 hour. (500 points):", points: 500, count: 0 },
+  { id: "15", name: "Checksheet Requirement Demo (5 points):", points: 5, count: 0 },
+  { id: "16", name: "Self-Originated Demo (3 points):", points: 3, count: 0 },
+  { id: "17", name: "Clay Demo (50 points):", points: 50, count: 0 },
+  { id: "18", name: "Essays, Charts, Diagrams (10 points):", points: 10, count: 0 },
+  { id: "19", name: "Course Completions (2000 points):", points: 2000, count: 0 },
+  { id: "20", name: "Course Completion Bonus, each day ahead of target, 2000 points:", points: 2000, count: 0 },
+  { id: "21", name: "Points for each day you are overdue on a course (-200 points):", points: -200, count: 0 },
 ];
 
 const Index = () => {
@@ -55,10 +64,10 @@ const Index = () => {
               <Award className="h-8 w-8 text-primary-foreground" />
               <div>
                 <h1 className="text-2xl font-bold text-primary-foreground">
-                  Production Points Tracker
+                  Daily Points Calculator
                 </h1>
                 <p className="text-sm text-primary-foreground/80">
-                  Delphian School Daily Achievements
+                  Delphian School Daily Points
                 </p>
               </div>
             </div>
@@ -98,7 +107,7 @@ const Index = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-muted-foreground">
-                      Today's Total Points
+                      Total Points
                     </p>
                     <p className="mt-1 text-5xl font-bold bg-gradient-accent bg-clip-text text-transparent">
                       {totalPoints}
@@ -111,7 +120,7 @@ const Index = () => {
                 {totalPoints > 0 && (
                   <div className="mt-4 rounded-lg bg-accent/10 px-4 py-2">
                     <p className="text-sm text-accent font-medium">
-                      Great work! Keep building your achievements! 🎯
+                      Great work! Keep being productive! 🎯
                     </p>
                   </div>
                 )}
