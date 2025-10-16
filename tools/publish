@@ -2,12 +2,12 @@
 
 # Set the path to your Git repository (one folder up from the current directory)
 PID_FILE=".npm_preview_pid"
-PORT=8080
+PORT=4173
 
 # Function to start the npm preview
 start_preview() {
     echo "Starting the web project with 'npm run preview'..."
-    npm run dev & echo $! > "$PID_FILE"
+    npm run preview & echo $! > "$PID_FILE"
 }
 
 kill_process_using_port() {
@@ -37,7 +37,7 @@ cleanup() {
 
 kill_all_npm_processes() {
     echo "Killing all npm processes..."
-    pkill -f "npm"
+    pkill -f "npm run preview"
 }
 
 kill_all_npm_processes
