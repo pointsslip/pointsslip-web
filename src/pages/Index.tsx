@@ -39,9 +39,11 @@ const link = document.createElement('a');
 link.href = 'https://delphinet.delphian.org/student/general/studentInfoPage.aspx';
 link.textContent = 'Turn points in here!';
 
+
 const copyleft = document.createElement('a');
 copyleft.href = 'https://www.gnu.org/licenses/lgpl-3.0.html';
 copyleft.textContent = 'GNU GPL v3';
+document.mt-8animate-scale-in.appendChild(copyleft);
 
 const Index = () => {
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
@@ -109,7 +111,7 @@ const Index = () => {
           </div>
 
           {/* Total Points Display */}
-          <div className="mt-8 animate-scale-in">
+          <div className="mt-8animate-scale-in">
             <div className="rounded-2xl bg-gradient-accent p-1 shadow-elegant">
               <div className="rounded-xl bg-card p-6">
                 <div className="flex items-center justify-between">
@@ -119,7 +121,6 @@ const Index = () => {
                     </p>
                     <p className="mt-1 text-5xl font-bold bg-gradient-accent bg-clip-text text-transparent">
                       {totalPoints}
-                      link
                     </p>
                   </div>
                   <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-accent animate-glow-pulse">
@@ -129,7 +130,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-            copyleft
             <p className="text">
               Made with ❤️ and Open Source by Ari Cummings.
             </p>
