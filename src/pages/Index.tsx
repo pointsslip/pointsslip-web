@@ -43,7 +43,6 @@ link.textContent = 'Turn points in here!';
 const copyleft = document.createElement('a');
 copyleft.href = 'https://www.gnu.org/licenses/lgpl-3.0.html';
 copyleft.textContent = 'GNU GPL v3';
-document.mt-8animate-scale-in.appendChild(copyleft);
 
 const Index = () => {
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
