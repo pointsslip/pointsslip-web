@@ -35,15 +35,6 @@ const initialTasks: Task[] = [
   { id: "21", name: "Points for each day you are overdue on a course (-200 points):", points: -200, count: 0 },
 ];
 
-const link = document.createElement('a');
-link.href = 'https://delphinet.delphian.org/student/general/studentInfoPage.aspx';
-link.textContent = 'Turn points in here!';
-
-
-const copyleft = document.createElement('a');
-copyleft.href = 'https://www.gnu.org/licenses/lgpl-3.0.html';
-copyleft.textContent = 'GNU GPL v3';
-
 const Index = () => {
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
 
@@ -110,7 +101,7 @@ const Index = () => {
           </div>
 
           {/* Total Points Display */}
-          <div className="mt-8animate-scale-in">
+          <div className="mt-8 animate-scale-in">
             <div className="rounded-2xl bg-gradient-accent p-1 shadow-elegant">
               <div className="rounded-xl bg-card p-6">
                 <div className="flex items-center justify-between">
@@ -129,9 +120,31 @@ const Index = () => {
               </div>
             </div>
           </div>
-            <p className="text">
-              Made with ❤️ and Open Source by Ari Cummings.
-            </p>
+
+          {/* Links placed right before the "Made with..." line */}
+          <div className="mt-4 flex flex-wrap items-center gap-4">
+            <a
+              href="https://delphinet.delphian.org/student/general/studentInfoPage.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary-foreground underline hover:opacity-90"
+            >
+              Turn points in here!
+            </a>
+
+            <a
+              href="https://www.gnu.org/licenses/lgpl-3.0.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary-foreground underline hover:opacity-90"
+            >
+              GNU GPL v3
+            </a>
+          </div>
+
+          <p className="text mt-3">
+            Made with ❤️ and Open Source by Ari Cummings.
+          </p>
         </div>
       </main>
     </div>
