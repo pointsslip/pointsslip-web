@@ -126,6 +126,7 @@ const Index = () => {
                   <div className="mt-4 rounded-lg bg-accent/10 px-4 py-2">
                     <p className="text-sm text-accent font-medium">
                       link
+                      "GNU GPL v3 Made with ❤️ and Open Source by Ari Cummings."
                     </p>
                   </div>
                 )}
