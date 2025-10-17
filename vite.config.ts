@@ -19,10 +19,7 @@ export default defineConfig(({ mode }) => ({
       'points.aricummings.com',
     ],
   },
-  plugins: [
-    react(),
-    mode === 'development',
-  ].filter(Boolean),
+  plugins: [react()],
 
   resolve: {
     alias: {

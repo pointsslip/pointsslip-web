@@ -38,11 +38,7 @@ const initialTasks: Task[] = [
 const externalLink = document.createElement('a');
 externalLink.href = 'https://delphinet.delphian.org/student/general/studentInfoPage.aspx';
 externalLink.textContent = 'Turn in points here!';
-externalLink.addEventListener('click', (event) => {
-  if (!confirm('Are you sure you want to leave this page?')) {
-    event.preventDefault();
-  }
-});
+externalLink.addEventListener('click', (event) => {event.preventDefault();});
 document.body.appendChild(externalLink);
 
 const Index = () => {
