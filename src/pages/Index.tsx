@@ -130,8 +130,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-            link
-            copyleft
             <p className="text">
               Made with ❤️ and Open Source by Ari Cummings.
             </p>
