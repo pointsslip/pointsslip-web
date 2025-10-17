@@ -125,19 +125,16 @@ const Index = () => {
                   </div>
                   <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-accent animate-glow-pulse">
                     <Award className="h-10 w-10 text-accent-foreground" />
-                    link
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="copyleft-mark">
+            link
             copyleft
             <p className="text">
               Made with ❤️ and Open Source by Ari Cummings.
             </p>
-          </div>
         </div>
       </main>
     </div>
