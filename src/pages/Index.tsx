@@ -120,7 +120,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="mt-4 flex flex-wrap items-center gap-4">
             <a
               href="https://delphinet.delphian.org/student/general/studentInfoPage.aspx"
@@ -144,6 +144,18 @@ const Index = () => {
           <p className="text mt-3">
             Made with ❤️ and Open Source by Ari Cummings.
           </p>
+
+          <div className="mt-4 flex flex-wrap items-end gap-4">
+            <a
+              href="https://github.com/pointsslip/pointsslip-web"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary-foreground underline hover:opacity-90"
+            >
+              Source Code
+            </a>
+          </div>
+
         </div>
       </main>
     </div>
