@@ -120,8 +120,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-
-          {/* Links placed right before the "Made with..." line */}
+          
           <div className="mt-4 flex flex-wrap items-center gap-4">
             <a
               href="https://delphinet.delphian.org/student/general/studentInfoPage.aspx"
