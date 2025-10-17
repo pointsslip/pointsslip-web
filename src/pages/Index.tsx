@@ -38,12 +38,10 @@ const initialTasks: Task[] = [
 const link = document.createElement('a');
 link.href = 'https://delphinet.delphian.org/student/general/studentInfoPage.aspx';
 link.textContent = 'Turn points in here!';
-document.body.appendChild(link);
 
 const copyleft = document.createElement('a');
 copyleft.href = 'https://www.gnu.org/licenses/lgpl-3.0.html';
 copyleft.textContent = 'GNU GPL v3';
-document.body.appendChild(copyleft);
 
 const Index = () => {
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
@@ -121,6 +119,7 @@ const Index = () => {
                     </p>
                     <p className="mt-1 text-5xl font-bold bg-gradient-accent bg-clip-text text-transparent">
                       {totalPoints}
+                      link
                     </p>
                   </div>
                   <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-accent animate-glow-pulse">
@@ -130,6 +129,7 @@ const Index = () => {
               </div>
             </div>
           </div>
+            copyleft
             <p className="text">
               Made with ❤️ and Open Source by Ari Cummings.
             </p>
