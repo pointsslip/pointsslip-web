@@ -40,6 +40,11 @@ link.href = 'https://delphinet.delphian.org/student/general/studentInfoPage.aspx
 link.textContent = 'Turn points in here!';
 document.body.appendChild(link);
 
+const copyleft = document.createElement('a');
+copyleft.href = 'https://www.gnu.org/licenses/lgpl-3.0.html';
+copyleft.textContent = 'GNU GPL v3';
+document.body.appendChild(copyleft);
+
 const Index = () => {
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
 
@@ -120,18 +125,18 @@ const Index = () => {
                   </div>
                   <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-accent animate-glow-pulse">
                     <Award className="h-10 w-10 text-accent-foreground" />
+                    link
                   </div>
                 </div>
-                {totalPoints > 0 && (
-                  <div className="mt-4 rounded-lg bg-accent/10 px-4 py-2">
-                    <p className="text-sm text-accent font-medium">
-                      link
-                      "GNU GPL v3 Made with ❤️ and Open Source by Ari Cummings."
-                    </p>
-                  </div>
-                )}
               </div>
             </div>
+          </div>
+
+          <div className="copyleft-mark">
+            copyleft
+            <p className="text">
+              Made with ❤️ and Open Source by Ari Cummings.
+            </p>
           </div>
         </div>
       </main>
